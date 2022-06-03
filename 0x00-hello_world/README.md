@@ -1,1 +1,1 @@
-prints a sentence
+prints a line
