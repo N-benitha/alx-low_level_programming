@@ -1,1 +1,1 @@
-generating assembly code
+program that prints text next to standard error
