@@ -1,1 +1,1 @@
-compiles and creates an executable
+C program that prints a sentence
