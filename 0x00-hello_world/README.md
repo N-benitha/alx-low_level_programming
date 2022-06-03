@@ -1,1 +1,1 @@
-C program that prints a sentence
+prints a sentence
