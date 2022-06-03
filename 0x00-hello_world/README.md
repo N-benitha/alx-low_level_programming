@@ -1,1 +1,1 @@
-Preprocesses C file and saves the result in another file
+compiles C file but does not link
