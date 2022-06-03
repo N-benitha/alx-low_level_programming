@@ -1,1 +1,1 @@
-assembly code of C file
+compiles and creates an executable
