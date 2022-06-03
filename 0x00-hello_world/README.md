@@ -1,1 +1,1 @@
-compiles C file but does not link
+assembly code of C file
