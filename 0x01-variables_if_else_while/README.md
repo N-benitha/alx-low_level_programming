@@ -1,1 +1,1 @@
-prints whethers a number is positive or negative
+last ddigit of random number
