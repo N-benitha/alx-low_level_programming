@@ -1,1 +1,1 @@
-printing putchar
+Prints alphabet in lowercase
