@@ -1,16 +1,10 @@
 int _putchar(char c);
 void print_alphabet(void)
 {
-	int i = 0;
+	int i;
 
-	while(i < 10)
-	{
-		char c;
+	for(i = 'a'; i <= 'z'; i++)
+		_putchar(i);
 
-		for(c = 'a'; c <= 'z'; c++)
-			_putchar(c);
-
-		i++;
-		_putchar('\n');
-	}
+	_putchar('\n');
 }
