@@ -21,12 +21,12 @@ int main(void)
 	{
 		pswd[i] = rand() % 78;
 		sum += (pswd[i] + '0');
-		_putchar(pswd[i] + '0');
+		putchar(pswd[i] + '0');
 		if ((2272 - sum) - '0' < 78)
 		{
 			n = 2772 - sum - '0';
 			sum += n;
-			_putchar(n + '0');
+			putchar(n + '0');
 			break;
 		}
 	}
