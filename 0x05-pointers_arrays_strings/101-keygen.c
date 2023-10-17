@@ -12,33 +12,24 @@
 int main(void)
 {
 	int i, sum, n;
-	char pswd[100];
+	int pswd[100];
 	
 	sum = 0;
 
 	srand(time(NULL));
-	for (i = 0; i < 98; i++)
+	for (i = 0; i < 100; i++)
 	{
-		pswd[i] = rand() % 78 + 48;
-		sum += (pswd[i] - '0');
-		putchar(pswd[i]);
+		pswd[i] = rand() % 78;
+		sum += (pswd[i] + '0');
+		putchar(pswd[i] + '0');
+		if ((2272 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
 	}
-
-	n = 2772 - sum;
-	if (n < 10)
-	{
-		pswd[98] = n + '0';
-		pswd[99] = '\0';
-	}
-	else
-	{
-		pswd[98] = (n % 10) + '0';
-		pswd[99] = (n / 10) + '0';
-	}
-	printf("\nPassword: %s\n", pswd);
-
-	putchar('\n');
-	printf("Password: %s\n, pswd);
 
 	return (0);
 }
