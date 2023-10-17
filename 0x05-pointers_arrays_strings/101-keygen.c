@@ -12,24 +12,21 @@
 int main(void)
 {
 	int i, sum, n;
-	int pswd[100];
+	char pswd[100];
 	
 	sum = 0;
 
 	srand(time(NULL));
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 99; i++)
 	{
-		pswd[i] = rand() % 78;
-		sum += (pswd[i] + '0');
-		putchar(pswd[i] + '0');
-		if ((2272 - sum) - '0' < 78)
-		{
-			n = 2772 - sum - '0';
-			sum += n;
-			putchar(n + '0');
-			break;
-		}
+		pswd[i] = rand() % 78 + 48;
+		sum += (pswd[i] - '0');
+		putchar(pswd[i]);
 	}
+	n = 2772 - sum - '0';
+	pswd[99] = n + '0';
+	putchar(n);
+	putchar('\n');
 
 	return (0);
 }
