@@ -17,15 +17,19 @@ int main(void)
 	sum = 0;
 
 	srand(time(NULL));
-	for (i = 0; i < 99; i++)
+	for (i = 0; i < 98; i++)
 	{
 		pswd[i] = rand() % 78 + 48;
 		sum += (pswd[i] - '0');
 		putchar(pswd[i]);
 	}
-	n = 2772 - sum - '0';
-	pswd[99] = n + '0';
-	putchar(n);
+
+	n = (2772 - sum) % 10;
+	pswd[98] = n + '0';
+	pswd[99] = 2772 - sum - n + '0';
+	putchar(pswd[98]);
+	putchar(pswd[99]);
+
 	putchar('\n');
 
 	return (0);
