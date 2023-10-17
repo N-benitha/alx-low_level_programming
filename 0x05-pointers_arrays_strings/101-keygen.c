@@ -12,8 +12,7 @@
 int main(void)
 {
 	int i, sum, n;
-	int pswd[100];
-	
+	int pswd[100];	
 	sum = 0;
 
 	srand(time(NULL));
