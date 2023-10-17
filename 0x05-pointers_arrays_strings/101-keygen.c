@@ -24,13 +24,21 @@ int main(void)
 		putchar(pswd[i]);
 	}
 
-	n = (2772 - sum) % 10;
-	pswd[98] = n + '0';
-	pswd[99] = 2772 - sum - n + '0';
-	putchar(pswd[98]);
-	putchar(pswd[99]);
+	n = 2772 - sum;
+	if (n < 10)
+	{
+		pswd[98] = n + '0';
+		pswd[99] = '\0';
+	}
+	else
+	{
+		pswd[98] = (n % 10) + '0';
+		pswd[99] = (n / 10) + '0';
+	}
+	printf("\nPassword: %s\n", pswd);
 
 	putchar('\n');
+	printf("Password: %s\n, pswd);
 
 	return (0);
 }
