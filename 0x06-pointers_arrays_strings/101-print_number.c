@@ -13,20 +13,20 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		n = (unsigned int)-n;
 	}
 	if (n == 0)
 		_putchar('0');
 	else
 	{
-		while ((n / i) >= 10)
+		while ((n / i) > 0)
 			i *= 10;
 
-		while (i > 0)
+		while (i > 1)
 		{
+			i /= 10;
 			_putchar((n / i) + '0');
 			n %= i;
-			i /= 10;
 		}
 	}
 }
