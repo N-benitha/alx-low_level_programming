@@ -8,19 +8,8 @@
 char *cap_string(char *s)
 {
 	int i = 1, j, check;
-	char a[0] = ',';
-	char a[1] = ';';
-	char a[2] = '.';
-	char a[3] = '!';
-	char a[4] = '?';
-	char a[5] = '"';
-	char a[6] = '(';
-	char a[7] = ')';
-	char a[8] = '{';
-	char a[9] = '}';
-	char a[10] = '\n';
-	char a[11] = '\t';
-	char a[12] = ' ';
+	char a[] = {',', ';', '.', '!', '?', '"', '(', ')',
+		'{', '}', '\n', '\t', ' '};
 
 	if (s[0] > 96 && s[0] < 123)
 		s[0] -= 32;
