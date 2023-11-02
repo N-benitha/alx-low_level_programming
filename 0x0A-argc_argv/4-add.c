@@ -32,7 +32,7 @@ int is_number(char *s)
  * @argv: pointer of array of pointer containg strings entering main
  * Return : Always 0 (Success)
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i, n , ar;
 
