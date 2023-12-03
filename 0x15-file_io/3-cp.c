@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	cwrite = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	while ((file = read(cread, buf, 1024)) > 0)
 	{
-		if (write(cwrite, buf, file) != file || cwrite == -1)
+		if (write(cwrite, buf, file)  == -1)
 		{
 		dprintf(STDERR_FILENO, "Err: Can't write to %s\n", argv[2]);
 		exit(99);
