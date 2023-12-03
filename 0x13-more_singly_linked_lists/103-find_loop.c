@@ -9,32 +9,32 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	 listint_t *b;
-	 listint_t *prev;
-	 
-	 b = head;
-	 prev = head;
-	 while (head && b && b->next)
-	 {
-		 head = head->next;
-		 b = b->next->next;
-		 if (head == b)
-		 {
-			 head = prev;
-			 prev =  b;
-			 while (1)
-			 {
-				 b = prev;
-				 while (b->next != head && b->next != prev)
-				 {
-					 b = b->next;
-				 }
-				 if (b->next == head)
-					 break;
-				 head = head->next;
-			 }
-			 return (b->next);
-		 }
-	 }
-	 return (NULL);
+	listint_t *b;
+	listint_t *prev;
+
+	b = head;
+	prev = head;
+	while (head && b && b->next)
+	{
+		head = head->next;
+		b = b->next->next;
+		if (head == b)
+		{
+			head = prev;
+			prev =  b;
+			while (1)
+			{
+				b = prev;
+				while (b->next != head && b->next != prev)
+				{
+					b = b->next;
+				}
+				if (b->next == head)
+					break;
+				head = head->next;
+			}
+			return (b->next);
+		}
+	}
+	return (NULL);
 }
