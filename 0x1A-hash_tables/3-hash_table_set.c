@@ -2,15 +2,15 @@
 
 /**
  * hash_table_set - adds an element to the hash table
- * @ht: hash table
- * @key: key to be added to the hash table
+ * @ht: a pointer to the hash table
+ * @key: key to add - can not be empty string
  * @value: value of the key
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int i;
+	unsigned long int i, index;
 	hash_node_t *hn;
 	char *value_cp;
 
@@ -35,7 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (hn == NULL)
 	{
 		free(value_cp);
-		return (NULL);
+		return (0);
 	}
 	hn->key = strdup(key);
 	if (hn->key == NULL)
