@@ -15,12 +15,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (size == 0)
 		return (NULL);
 
-	arr = malloc(sizeof(hash_table_t));
+	arr = calloc(1, sizeof(hash_table_t));
 	if (arr == NULL)
 		return (NULL);
 
 	arr->size = size;
-	arr->array = malloc(sizeof(hash_table_t *) * size);
+	arr->array = calloc(size, sizeof(hash_table_t *));
 
 	if (arr->array == NULL)
 	{
