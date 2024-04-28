@@ -8,9 +8,10 @@
  * and NULL if something went wrong
  */
 
-hash_table_t *shash_table_create(unsigned long int size)
+shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *arr;
+	unsigned long int i;
 
 	if (size == 0)
 		return (NULL);
