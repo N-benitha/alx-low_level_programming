@@ -1,3 +1,3 @@
 #!/bin/bash
 gcc TEST/*.c -c -fPIC
-gcc *.o -shared -o liball.so
+gcc -shared -o liball.so -Wl,-soname,liball.so *.o
